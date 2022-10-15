@@ -54,6 +54,20 @@ void Hack()
 }
 ```
 
+Position Get/Set:
+```cpp
+// Teleport to self
+void Teleport()
+{
+    GameObject* Player = GetLocalPlayer();
+    
+    Vector3 position = Unity::GetPosition(Player);
+   
+    Unity::SetPosition(Player, position); 
+}
+
+```
+
 loop through different type(Active,Tagged,UnTagged) of GameObjects in ALL Scenes:
 ```cpp
 Unity::ObjectIterator(
