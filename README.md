@@ -3,9 +3,13 @@ A run-time API resolver for IL2CPP Unity in External way.
 
 Internal version:[https://github.com/sneakyevilSK/IL2CPP_Resolver]
 
+### Note
+i have provided basic memory r/w and helper functions in Unity/rw/usermode.h
+if you are using for kernel project, you need replace with your own one.
+
 ### WARNING
-this is still working-in-progress.
-some struct maybe different between different unity engine version.
+* this is still working-in-progress.
+* basic struct maybe DIFFERENT between DIFFERENT Unity Engine version.
 
 ### Requirements
 * C++ 17 or greater
