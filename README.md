@@ -81,6 +81,7 @@ void Teleport()
 
 loop through different type(Active,Tagged,UnTagged) of GameObjects in ALL Scenes:
 ```cpp
+// ObjectIterator lambda: return nullptr to make continue loop.
 Unity::ObjectIterator(
     [](void* ptr, GameObject object) -> GameObject* {
         return nullptr;
