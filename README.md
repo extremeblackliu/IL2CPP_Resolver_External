@@ -19,7 +19,7 @@ some struct maybe different between different unity engine version.
 
 ### Quick Example
 ```cpp
-void UpdatePlayers()
+GameObject* GetLocalPlayer()
 {
     GameObject* Player = Unity::ObjectIterator(
         [](void* ptr, GameObject object) -> GameObject* {
@@ -33,6 +33,32 @@ void UpdatePlayers()
             return nullptr;
         }
     );
+    return Player;
+}
+
+void Hack()
+{
+    // example manipulate of rigidbody.isKinematic
+    GameObject* Player = GetLocalPlayer();
+    
+    Component* Component = Unity::GetComponentByIndex(Player, 1, true);
+    if(!Component)
+       return;
+    
+    Rigidbody rigidbody;
+    um::ReadMemory(Component, &rigidbody);
+    
+    rigidbody.isKinematic = false;
+    
+    um::WriteMemory(Component, &rigidbody);
 }
 ```
 
+loop through different type(Active,Tagged,UnTagged) of GameObjects in ALL Scenes:
+```cpp
+Unity::ObjectIterator(
+    [](void* ptr, GameObject object) -> GameObject* {
+        return nullptr;
+}, eLOOPTYPE_UnTagged // eLOOPTYPE_Active | eLOOPTYPE_Tagged | eLOOPTYPE_UnTagged
+);
+```
