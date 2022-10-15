@@ -1,0 +1,1 @@
+IL2CPP_Resolver_External
