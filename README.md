@@ -7,7 +7,7 @@ Internal version:[https://github.com/sneakyevilSK/IL2CPP_Resolver]
 this is still working-in-progress.
 
 ### Requirements
-[.] C++ 17 or greater
+* C++ 17 or greater
 
 ### Quick Example
 ```cpp
