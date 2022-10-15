@@ -14,8 +14,9 @@ if you are using for kernel project, you need replace with your own one.
 ```
 
 ### WARNING
-* this is still working-in-progress.
-* basic struct maybe DIFFERENT between DIFFERENT Unity Engine version.
+* This is still working-in-progress.
+* Basic struct maybe DIFFERENT between DIFFERENT Unity Engine version.
+* The code for this project is still messy, since I spent most time on reversing Unity's functions in IDA, which I'll sort into neat and readable code later.
 
 ### Requirements
 * C++ 17 or greater
