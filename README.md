@@ -14,13 +14,25 @@ some struct maybe different between different unity engine version.
 * More Unity Version Support
 * More Methods
 
+### Tested Games
+* VRChat[Unity 2019.4]
+
 ### Quick Example
 ```cpp
+void UpdatePlayers()
+{
+    GameObject* Player = Unity::ObjectIterator(
+        [](void* ptr, GameObject object) -> GameObject* {
 
-```
-
-### Registering OnUpdate Callback
-```cpp
-
+            char buf[255];
+            um::ReadMemory(object.m_ObjectName, &buf);
+            if (buf[10] == 'L') // L - Local , R - Remote
+            {
+                return (GameObject*)ptr;
+            }
+            return nullptr;
+        }
+    );
+}
 ```
 
