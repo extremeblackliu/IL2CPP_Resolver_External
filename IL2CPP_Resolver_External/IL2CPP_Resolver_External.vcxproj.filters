@@ -13,10 +13,33 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Unity">
+      <UniqueIdentifier>{b413b56d-ee68-4ce2-8134-50d6c40c12d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rw">
+      <UniqueIdentifier>{8aaaaef3-dc76-4ddd-898a-d4b4d405411e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="IL2CPP_Resolver_External.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Unity\Classes.h">
+      <Filter>Unity</Filter>
+    </ClInclude>
+    <ClInclude Include="Unity\GameClasses.h">
+      <Filter>Unity</Filter>
+    </ClInclude>
+    <ClInclude Include="Unity\IL2CPPClasses.h">
+      <Filter>Unity</Filter>
+    </ClInclude>
+    <ClInclude Include="Unity\Unity.h">
+      <Filter>Unity</Filter>
+    </ClInclude>
+    <ClInclude Include="Unity\rw\usermode.h">
+      <Filter>rw</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
