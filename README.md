@@ -102,7 +102,7 @@ namespace GlobalVar // put it on some globalvar, cache it
 void CacheClasses()
 {
     std::vector<std::pair<il2cppClass*, il2cppClass>> Classes;
-    IL2CPP::FetchClasses(&Classes, "VRCSDK3");  // in other game, they are mostly in Assembly-CSharp.dll
+    IL2CPP::FetchClasses(&Classes, "VRCSDK3");  // in other game, game classes are mostly in Assembly-CSharp.dll
 
     GlobalVar::VRCPickup = IL2CPP::FilterClass(Classes, "VRCPickup", "VRC.SDK3.Components");
 }
