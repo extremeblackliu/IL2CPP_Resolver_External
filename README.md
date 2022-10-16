@@ -23,6 +23,7 @@ if you have more unity different version struct or code improve, pull request!
 * C++ 17 or greater
 
 ### TODO
+* Auto-Detect System Class and Game Class for component looping
 * More Unity Version Support
 * More Methods
 
@@ -88,4 +89,60 @@ Unity::ObjectIterator(
         return nullptr;
 }, eLOOPTYPE_UnTagged // eLOOPTYPE_Active | eLOOPTYPE_Tagged | eLOOPTYPE_UnTagged
 );
+```
+
+find the class we want, and use it for find the component
+```cpp
+// Example of VRChat
+namespace GlobalVar // put it on some globalvar, cache it
+{
+    il2cppClass* VRCPickup;
+}
+
+void CacheClasses()
+{
+    std::vector<std::pair<il2cppClass*, il2cppClass>> Classes;
+    IL2CPP::FetchClasses(&Classes, "VRCSDK3");  // in other game, they are mostly in Assembly-CSharp.dll
+
+    GlobalVar::VRCPickup = IL2CPP::FilterClass(Classes, "VRCPickup", "VRC.SDK3.Components");
+}
+
+void Hack()
+{
+    Unity::ObjectIterator(
+                [](void* ptr, GameObject object) -> GameObject* {
+               
+            // the loop is manually, see TODO #1
+                    
+            void* buffer = malloc(object.m_iComponents * sizeof(ComponentList));
+            drv::ReadMemory((void*)((uintptr_t)object.m_ComponentList + 8), buffer, object.m_iComponents * sizeof(ComponentList));
+            if (!buffer)
+            {
+                return nullptr;
+            }
+
+            for (int i = 0; i < object.m_iComponents; i++)
+            {
+                ComponentList* list = (ComponentList*)buffer;
+
+                Component component;
+                drv::ReadMemory(list[i].m_Component, &component);
+
+                il2cppClass* klass = IL2CPP::GetClassByComponent(component.m_Component, false);
+
+                if (klass == Cache::VRCPickup) // we compare the il2cppClass Pointer, it will be same
+                {
+                    bool DisallowTheft = false;
+                    drv::WriteMemory((void*)((uintptr_t)component.m_Component + 0x1C), &DisallowTheft); // use component.m_Component because its game class
+                    // or do something to component...
+                    break;
+                }
+            }
+            free(buffer);
+
+
+            return nullptr;
+        }, eLOOPTYPE_UnTagged
+    );
+}
 ```
