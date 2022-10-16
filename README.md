@@ -110,7 +110,7 @@ void CacheClasses()
 void Hack()
 {
     Unity::ObjectIterator(
-                [](void* ptr, GameObject object) -> GameObject* {
+            [](void* ptr, GameObject object) -> GameObject* {
                
             // the loop is manually, see TODO #1
                     
