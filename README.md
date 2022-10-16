@@ -115,7 +115,7 @@ void Hack()
             // the loop is manually, see TODO #1
                     
             void* buffer = malloc(object.m_iComponents * sizeof(ComponentList));
-            drv::ReadMemory((void*)((uintptr_t)object.m_ComponentList + 8), buffer, object.m_iComponents * sizeof(ComponentList));
+            um::ReadMemory((void*)((uintptr_t)object.m_ComponentList + 8), buffer, object.m_iComponents * sizeof(ComponentList));
             if (!buffer)
             {
                 return nullptr;
@@ -126,14 +126,14 @@ void Hack()
                 ComponentList* list = (ComponentList*)buffer;
 
                 Component component;
-                drv::ReadMemory(list[i].m_Component, &component);
+                um::ReadMemory(list[i].m_Component, &component);
 
                 il2cppClass* klass = IL2CPP::GetClassByComponent(component.m_Component, false);
 
                 if (klass == Cache::VRCPickup) // we compare the il2cppClass Pointer, it will be same
                 {
                     bool DisallowTheft = false;
-                    drv::WriteMemory((void*)((uintptr_t)component.m_Component + 0x1C), &DisallowTheft); // use component.m_Component because its game class
+                    um::WriteMemory((void*)((uintptr_t)component.m_Component + 0x1C), &DisallowTheft); // use component.m_Component because its game class
                     // or do something to component...
                     break;
                 }
