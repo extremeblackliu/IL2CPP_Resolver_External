@@ -144,10 +144,20 @@
     <ClCompile Include="IL2CPP_Resolver_External.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Unity\Classes.h" />
-    <ClInclude Include="Unity\GameClasses.h" />
-    <ClInclude Include="Unity\IL2CPPClasses.h" />
+    <ClInclude Include="Unity\Classes\Classes.h" />
+    <ClInclude Include="Unity\Classes\IL2CPP\IL2CPPClasses.h" />
+    <ClInclude Include="Unity\Classes\System\CharacterController.h" />
+    <ClInclude Include="Unity\Classes\System\Component.h" />
+    <ClInclude Include="Unity\Classes\System\GameClasses.h" />
+    <ClInclude Include="Unity\Classes\System\GameObject.h" />
+    <ClInclude Include="Unity\Classes\System\Object.h" />
+    <ClInclude Include="Unity\Classes\System\Rigidbody.h" />
+    <ClInclude Include="Unity\Classes\System\String.h" />
+    <ClInclude Include="Unity\Classes\System\Transform.h" />
+    <ClInclude Include="Unity\IL2CPP.h" />
     <ClInclude Include="Unity\rw\usermode.h" />
+    <ClInclude Include="Unity\Structs\Engine.h" />
+    <ClInclude Include="Unity\Structs\System_String.h" />
     <ClInclude Include="Unity\Unity.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

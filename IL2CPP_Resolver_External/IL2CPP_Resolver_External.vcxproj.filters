@@ -19,6 +19,18 @@
     <Filter Include="rw">
       <UniqueIdentifier>{8aaaaef3-dc76-4ddd-898a-d4b4d405411e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Unity\Classes">
+      <UniqueIdentifier>{060a77f8-b240-4e3f-a83b-ff5192183d16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Unity\Structs">
+      <UniqueIdentifier>{a9bf8ab4-79fc-4682-847a-cb6f4b4fcaa5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Unity\Classes\IL2CPP">
+      <UniqueIdentifier>{7c63f1bc-37f9-43ee-8361-7eb421c5f4d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Unity\Classes\System">
+      <UniqueIdentifier>{2d12dd40-a40a-420d-b24e-8618716d2e77}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="IL2CPP_Resolver_External.cpp">
@@ -26,20 +38,50 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Unity\Classes.h">
-      <Filter>Unity</Filter>
-    </ClInclude>
-    <ClInclude Include="Unity\GameClasses.h">
-      <Filter>Unity</Filter>
-    </ClInclude>
-    <ClInclude Include="Unity\IL2CPPClasses.h">
-      <Filter>Unity</Filter>
-    </ClInclude>
     <ClInclude Include="Unity\Unity.h">
       <Filter>Unity</Filter>
     </ClInclude>
     <ClInclude Include="Unity\rw\usermode.h">
       <Filter>rw</Filter>
+    </ClInclude>
+    <ClInclude Include="Unity\Classes\Classes.h">
+      <Filter>Unity\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Unity\Structs\Engine.h">
+      <Filter>Unity\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="Unity\Classes\IL2CPP\IL2CPPClasses.h">
+      <Filter>Unity\Classes\IL2CPP</Filter>
+    </ClInclude>
+    <ClInclude Include="Unity\Structs\System_String.h">
+      <Filter>Unity\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="Unity\Classes\System\Object.h">
+      <Filter>Unity\Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Unity\Classes\System\String.h">
+      <Filter>Unity\Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Unity\Classes\System\Transform.h">
+      <Filter>Unity\Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Unity\Classes\System\Component.h">
+      <Filter>Unity\Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Unity\Classes\System\GameClasses.h">
+      <Filter>Unity\Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Unity\Classes\System\GameObject.h">
+      <Filter>Unity\Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Unity\Classes\System\CharacterController.h">
+      <Filter>Unity\Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Unity\Classes\System\Rigidbody.h">
+      <Filter>Unity\Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Unity\IL2CPP.h">
+      <Filter>Unity</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
