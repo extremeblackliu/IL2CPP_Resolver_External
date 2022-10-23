@@ -17,7 +17,6 @@ if you have more unity different version struct or code improve, pull request!
 ### WARNING
 * This is still working-in-progress.
 * Basic struct maybe DIFFERENT between DIFFERENT Unity Engine version.
-* The code for this project is still messy, since I spent most time on reversing Unity's functions in IDA instead coding it, which I'll sort into neat and readable code later.
 
 ### Requirements
 * C++ 17 or greater
