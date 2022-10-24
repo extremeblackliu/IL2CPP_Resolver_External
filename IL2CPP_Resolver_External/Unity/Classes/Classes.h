@@ -30,21 +30,21 @@ struct ComponentList
 struct BaseObject
 {
 	IL2CPP_PAD(0x8);
-	BaseObject* nextObjectLink; //0x0008 
-	GameObject* object;			//0x0010 
+	BaseObject* nextObjectLink;
+	GameObject* object;
 };
 
 struct LastObjectBase
 {
 	IL2CPP_PAD(0x10);
-	GameObject* lastObject; //0x0010 
+	GameObject* lastObject;
 };
 
 struct GameObjectManager {
-	LastObjectBase* lastTaggedObject; //0x0000 
-	BaseObject* taggedObjects; //0x0008
-	LastObjectBase* lastActiveObject; //0x0010 
-	BaseObject* activeObjects; //0x0018
+	LastObjectBase* lastTaggedObject;
+	BaseObject* taggedObjects;
+	LastObjectBase* lastActiveObject;
+	BaseObject* activeObjects;
 	LastObjectBase* lastUntaggedObject;
 	BaseObject* UntaggedObjects;
 };
