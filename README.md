@@ -30,6 +30,22 @@ if you have more unity different version struct or code improve, pull request!
 * VRChat[Unity 2019.4]
 
 ### Quick Example
+
+Initialize
+```cpp
+if (!um::Init(FindWindowA(nullptr, "VRChat")))
+{
+   ExitWithMsg("VRChat not found\n");
+   return 0;
+}
+
+if (!Unity::Initialize())
+{
+    ExitWithMsg("Unity Initialize failed\n");
+    return 0;
+}
+```
+
 ```cpp
 GameObject* GetLocalPlayer()
 {
