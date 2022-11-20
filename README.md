@@ -12,11 +12,23 @@ if you are using for kernel project, you need replace with your own one.
 ```cpp
 #include "./Unity/Unity.h" 
 ```
+Initialize
+```cpp
+if (!um::Init(FindWindowA(nullptr, "Game")))
+{
+   return 0;
+}
+
+if (!Unity::Initialize())
+{
+    return 0;
+}
+```
 if you have more unity different version struct or code improve, pull request!
 
 ### WARNING
 * This is still working-in-progress.
-* Basic struct maybe DIFFERENT between DIFFERENT Unity Engine version.
+* Basic struct maybe DIFFERENT between DIFFERENT Unity Engine version.(Change in [https://github.com/extremeblackliu/IL2CPP_Resolver_External/blob/master/IL2CPP_Resolver_External/Unity/Classes/Classes.h])
 
 ### Requirements
 * C++ 17 or greater
@@ -31,21 +43,6 @@ if you have more unity different version struct or code improve, pull request!
 * VRChat[Unity 2019.4]
 
 ### Quick Example
-
-Initialize
-```cpp
-if (!um::Init(FindWindowA(nullptr, "VRChat")))
-{
-   ExitWithMsg("VRChat not found\n");
-   return 0;
-}
-
-if (!Unity::Initialize())
-{
-    ExitWithMsg("Unity Initialize failed\n");
-    return 0;
-}
-```
 
 ```cpp
 GameObject* GetLocalPlayer()
