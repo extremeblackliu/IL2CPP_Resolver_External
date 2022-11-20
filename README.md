@@ -25,6 +25,7 @@ if you have more unity different version struct or code improve, pull request!
 * Auto-Detect System Class and Game Class for component looping
 * More Unity Version Support
 * More Methods
+* Fetch Method from Module by giving Method's Name
 
 ### Tested on
 * VRChat[Unity 2019.4]
