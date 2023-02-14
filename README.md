@@ -8,22 +8,9 @@ i have provided basic memory r/w and helper functions in Unity/rw/usermode.h.
 
 if you are using for kernel project, you need replace with your own one.
 
-**include to your project with ./Unity folder and**
-```cpp
-#include "./Unity/Unity.h" 
-```
-Initialize
-```cpp
-if (!um::Init(FindWindowA(nullptr, "Game")))
-{
-   return 0;
-}
+# Initialize
+see [Example](https://github.com/extremeblackliu/IL2CPP_Resolver_External/edit/master/IL2CPP_Resolver_External/IL2CPP_Resolver_External.cpp);
 
-if (!Unity::Initialize())
-{
-    return 0;
-}
-```
 if you have more unity different version struct or code improve, pull request!
 
 ### WARNING
