@@ -1,7 +1,7 @@
 ## IL2CPP Resolver External
-A run-time API resolver for IL2CPP Unity in External way.
+A run-time API resolver for IL2CPP Unity in External.
 
-Internal version:[https://github.com/sneakyevilSK/IL2CPP_Resolver]
+(Internal version)[https://github.com/sneakyevilSK/IL2CPP_Resolver]
 
 ### Note
 i have provided basic memory r/w and helper functions in Unity/rw/usermode.h.
@@ -13,23 +13,7 @@ see [Example](https://github.com/extremeblackliu/IL2CPP_Resolver_External/edit/m
 
 if you have more unity different version struct or code improve, pull request!
 
-### WARNING
-* This is still working-in-progress.
-* Basic struct maybe DIFFERENT between DIFFERENT Unity Engine version.(Change in [Classes.h](https://github.com/extremeblackliu/IL2CPP_Resolver_External/blob/master/IL2CPP_Resolver_External/Unity/Classes/Classes.h))
-
-### Requirements
-* C++ 17 or greater
-
-### TODO
-* Auto-Detect System Class and Game Class for component looping
-* More Unity Version Support
-* More Methods
-* Fetch Method from Module by giving Method's Name
-
-### Tested on
-* VRChat[Unity 2019.4]
-
-### Quick Example
+# Quick Examples
 
 ```cpp
 GameObject* GetLocalPlayer()
@@ -146,3 +130,19 @@ void Hack()
     );
 }
 ```
+
+### WARNING
+* This is still working-in-progress.
+* Basic struct maybe DIFFERENT between DIFFERENT Unity Engine version.(Change in [Classes.h](https://github.com/extremeblackliu/IL2CPP_Resolver_External/blob/master/IL2CPP_Resolver_External/Unity/Classes/Classes.h))
+
+### Requirements
+* C++ 17 or greater
+
+### TODO
+* Auto-Detect System Class and Game Class for component looping
+* More Unity Version Support
+* More Methods
+* Fetch Method from Module by giving Method's Name
+
+### Tested on
+* VRChat[Unity 2019.4]
