@@ -1,7 +1,7 @@
 ## IL2CPP Resolver External
 A run-time API resolver for IL2CPP Unity in External.
 
-(Internal version)[https://github.com/sneakyevilSK/IL2CPP_Resolver]
+[Internal version](https://github.com/sneakyevilSK/IL2CPP_Resolver)
 
 ### Note
 i have provided basic memory r/w and helper functions in Unity/rw/usermode.h.
@@ -9,7 +9,7 @@ i have provided basic memory r/w and helper functions in Unity/rw/usermode.h.
 if you are using for kernel project, you need replace with your own one.
 
 # Initialize
-see [Example](https://github.com/extremeblackliu/IL2CPP_Resolver_External/edit/master/IL2CPP_Resolver_External/IL2CPP_Resolver_External.cpp);
+see [Example](https://github.com/extremeblackliu/IL2CPP_Resolver_External/blob/master/IL2CPP_Resolver_External/IL2CPP_Resolver_External.cpp);
 
 if you have more unity different version struct or code improve, pull request!
 
