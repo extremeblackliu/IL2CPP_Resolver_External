@@ -3,6 +3,9 @@ A run-time API resolver for IL2CPP Unity in External.
 
 [Internal version](https://github.com/sneakyevilSK/IL2CPP_Resolver)
 
+# REWRITE
+this library will be reimplement in future
+
 ### Note
 i have provided basic memory r/w and helper functions in Unity/rw/usermode.h.
 
