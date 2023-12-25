@@ -33,4 +33,4 @@ N/A
 
 ### Tested on
 * VRChat[Unity 2019.4.31]
-* VRChat[Unity 2022.3.6]
+* VRChat[Unity 2022.3.6] (testing...)
