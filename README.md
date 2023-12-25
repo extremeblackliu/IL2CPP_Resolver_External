@@ -23,7 +23,8 @@ N/A
 * This is still working-in-progress.
 
 # Requirements
-* C++ 17 or Greater
+* C++ 17 or Greater.
+* Windows only.
 
 # TODO
 * Auto-Detect System Class and Game Class for component looping
