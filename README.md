@@ -3,8 +3,16 @@ A run-time API resolver for IL2CPP Unity in External.
 
 [Internal version](https://github.com/sneakyevilSK/IL2CPP_Resolver)
 
-# REWRITE(WIP)
-Currently rewriting for the code to make it more like the Internal version
+# ARCHIVED
+External version is impossible, i started this because i need research for my own project.
+
+Soon i realize, some code signature i made cross only few unity versions.
+
+that means if i have to make all unity available, billion signature must be recreate, impossible for me.
+
+code is shit tho dont even try it
+
+thanks everyone
 
 # Initialize
 ```cpp
